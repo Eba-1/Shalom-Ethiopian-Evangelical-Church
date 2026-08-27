@@ -16,6 +16,11 @@ export default function Home(){return <main>
         <a href="#contact">Contact</a></div>
         <a className="give" href="#give">GIVE</a></nav>
 <section className="hero" id="top">
+    <div className="hero-slideshow" aria-hidden="true">
+        <img className="hero-slide hero-slide-one" src="/shalom-hero-community.jpg" alt=""/>
+        <img className="hero-slide hero-slide-two" src="/shalom-hero-worship.jpg" alt=""/>
+    </div>
+    <div className="hero-overlay"/>
     <div className="hero-shape hero-a"/>
     <div className="hero-shape hero-b"/>
     <div className="hero-content">
@@ -23,9 +28,7 @@ export default function Home(){return <main>
         <h1>A place to<br/><em>belong.</em></h1><p className="intro"><em>"And all thy children shall be taught of the LORD; and great shall be the peace of thy children."</em> Isaiah 54:13</p><div className="actions">
             <a className="primary" href="#visit">LEARN MORE <span>→</span></a>
             <a className="secondary" href="https://www.youtube.com/@Shalom-w2h/streams">WATCH LIVE</a></div></div>
-            <div className="hero-photo" role="img" aria-label="Placeholder for an authentic congregation photo">
-                <div className="photo-note"><span>01</span><p>PLACE YOUR BEST<br/>COMMUNITY PHOTO HERE</p></div>
-            <div className="people"><i/><i/><i/><i/><i/></div></div></section>
+</section>
 <section className="quick" id="visit"><div><small>NEXT SERVICE</small><strong>SUNDAY · 10:00 AM</strong></div><div><small>FIND US</small><strong>5501 SE THEISSEN ROAD, MILWAUKIE, OREGON</strong></div><a href="#contact">GET DIRECTIONS ↗</a></section>
 <section className="gallery-section" id="gallery"><div className="section-head"><div><p className="eyebrow dark">LIFE AT OUR CHURCH</p><h2>See faith in <em>motion.</em></h2></div><p>Explore moments of worship, friendship, service, and growth across our church community.</p></div><div className="gallery-grid">{galleries.map(([title,subtitle,cls],i)=><a className={`gallery-card ${cls} ${i<2?"large":""}`} href="#" key={title}><div className="placeholder"><span>PHOTO</span><b>{String(i+1).padStart(2,"0")}</b></div><div className="card-label"><div><h3>{title}</h3><p>{subtitle}</p></div><span>↗</span></div></a>)}</div><div className="center"><a className="outline" href="#">VIEW THE FULL GALLERY <span>→</span></a></div></section>
 <section className="community" id="community"><div className="community-copy"><p className="eyebrow gold">HERE FOR OUR CITY</p><h2>New here?<br/>You’re not <em>alone.</em></h2><p>Whether you just arrived or have called this city home for years, our community is ready to walk beside you.</p><a className="primary gold-btn" href="#">EXPLORE COMMUNITY SUPPORT →</a></div><div className="resource-grid"><article><span>01</span><h3>Newcomer support</h3><p>Local orientation, transportation, schools, and practical guidance.</p></article><article><span>02</span><h3>Work & education</h3><p>Employment resources, language classes, and skill-building support.</p></article><article><span>03</span><h3>Family connection</h3><p>Groups, youth programs, childcare information, and community care.</p></article><article><span>04</span><h3>Request support</h3><p>A private and respectful way to tell us how we can help.</p></article></div></section>
