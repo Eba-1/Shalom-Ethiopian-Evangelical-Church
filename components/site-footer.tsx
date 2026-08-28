@@ -25,7 +25,7 @@ export default function SiteFooter() {
           <a href="#top">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#gallery">Gallery</a>
+          <a href="/gallery">Gallery</a>
           <a href="#contact">Contact</a>
           <GiveDialog className="site-footer-give">Give</GiveDialog>
         </nav>
