@@ -5,7 +5,7 @@ export default function SiteFooter() {
     <footer className="site-footer" id="contact">
       <div className="site-footer-grid">
         <div className="site-footer-brand">
-          <a className="site-footer-logo-link" href="#top" aria-label="Return to the homepage">
+          <a className="site-footer-logo-link" href="/" aria-label="Return to the homepage">
             <img
               className="site-footer-logo"
               src="/shalom-church-logo.png"
@@ -20,16 +20,19 @@ export default function SiteFooter() {
 
         <nav className="site-footer-column" aria-label="Footer navigation">
           <h2>Quick Links</h2>
-          <a href="#top">Home</a>
+          <a href="/">Home</a>
           <a href="/about">About</a>
-          <a href="#visit">Services</a>
+          <a href="/ministries">Ministries</a>
           <a href="/gallery">Gallery</a>
           <a href="/contact">Contact</a>
         </nav>
 
         <div className="site-footer-column site-footer-contact">
           <h2>Connect</h2>
-          <a href="/contact">
+          <a className="site-footer-map-link"
+            href="https://www.google.com/maps/search/?api=1&query=5501+SE+Thiessen+Rd+Portland+OR+97267"
+            target="_blank"
+            rel="noreferrer">
             5501 SE Thiessen Rd<br />Portland, OR 97267
           </a>
           <a
