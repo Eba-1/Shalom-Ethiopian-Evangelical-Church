@@ -1059,44 +1059,103 @@ footer small {
   width: 42px;
   height: 42px;
 }
-footer {
-  background: #111515;
-  color: white;
-  padding: 70px 5vw 30px;
+.site-footer {
+  background: #f3eee5;
+  color: #242624;
+  padding: 54px 5vw 22px;
+  border-top: 1px solid rgba(167, 126, 57, 0.25);
+}
+.site-footer-grid {
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: 1.35fr 0.7fr 1.25fr 1fr;
+  gap: clamp(30px, 5vw, 76px);
+  max-width: 1320px;
+  margin: 0 auto;
 }
-.footer-brand {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+.site-footer-brand {
+  max-width: 280px;
 }
-.footer-logo {
-  width: 58px;
-  height: 70px;
+.site-footer-logo-link {
+  display: inline-block;
+}
+.site-footer-logo {
+  width: 180px;
+  height: 62px;
   object-fit: contain;
-  flex: none;
+  object-position: left center;
 }
-.footer-brand h2 {
-  font: 26px Georgia;
-  letter-spacing: 0.05em;
+.site-footer-brand p,
+.site-footer-column p,
+.site-footer-column a,
+.site-footer-column span {
+  color: #5d605b;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.site-footer-brand p {
+  margin: 20px 0 0;
+}
+.site-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+.site-footer-column h2 {
+  margin: 0 0 12px;
+  color: #262925;
+  font: 600 11px/1.2 Arial, sans-serif;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.site-footer-column a {
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+.site-footer-column a:hover,
+.site-footer-column a:focus-visible {
+  color: #a36b47;
+}
+.site-footer-services {
+  gap: 10px;
+}
+.site-footer-services p {
+  display: grid;
+  gap: 1px;
   margin: 0;
 }
-footer p {
-  line-height: 1.9;
-  font-size: 13px;
-  color: #b8bdbb;
+.site-footer-services strong {
+  color: #2f322f;
+  font-size: 11px;
 }
-.footer-bottom {
-  grid-column: 1/-1;
-  border-top: 1px solid #ffffff22;
-  padding-top: 25px;
-  margin-top: 35px;
-  font-size: 10px;
-  color: #777;
+.site-footer-services span {
+  font-size: 11px;
+}
+.site-footer-contact > a {
+  margin-bottom: 12px;
+}
+.site-footer-column .site-footer-follow-title {
+  margin: 6px 0 5px;
+}
+.site-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+}
+.site-footer-socials span,
+.site-footer-socials a {
+  font-size: 11px;
+}
+.site-footer-bottom {
+  max-width: 1320px;
+  margin: 38px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(38, 41, 37, 0.14);
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+  color: #777970;
+  font-size: 10px;
 }
 @media (max-width: 900px) {
   .links {
@@ -1194,11 +1253,11 @@ footer p {
     grid-column: 3;
     grid-row: 1/3;
   }
-  footer {
+  .site-footer-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .footer-brand {
-    grid-column: 1/-1;
+  .site-footer-brand {
+    max-width: 360px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1403,11 +1462,14 @@ footer p {
   .event h3 {
     font-size: 19px;
   }
-  footer {
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+  .site-footer {
+    padding: 44px 6vw 20px;
   }
-  .footer-bottom {
+  .site-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .site-footer-bottom {
     flex-direction: column;
     gap: 8px;
   }
