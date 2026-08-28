@@ -7,29 +7,16 @@ export default function PastorWelcome() {
 
   return (
     <section className="pastor-welcome" id="about" aria-labelledby="pastor-welcome-title">
-      <div className="pastor-portrait-wrap">
-        <img
-          className="pastor-portrait"
-          src="/pastor-melkamu-tadesse.jpg"
-          alt="Pastor Melkamu Tadesse preaching at Shalom Ethiopian Evangelical Church"
-        />
-        <div className="pastor-nameplate">
-          <span>SENIOR PASTOR</span>
-          <strong>Melkamu Tadesse</strong>
-        </div>
-      </div>
-
+      <span className="pastor-watermark" aria-hidden="true">WELCOME</span>
+      <div className="pastor-orbit" aria-hidden="true" />
       <div className="pastor-copy">
-        <span className="pastor-watermark" aria-hidden="true">WELCOME</span>
-        <p className="eyebrow gold">A MESSAGE FROM OUR SENIOR PASTOR</p>
-        <h2 id="pastor-welcome-title">Welcome to our<br /><em>church family.</em></h2>
+        <p className="pastor-label">A MESSAGE FROM OUR SENIOR PASTOR</p>
+        <h2 id="pastor-welcome-title">You are<br />welcome<br />here.</h2>
         <p className="pastor-lead">
-          It is a joy to have you with us, whether you are visiting for the first time
-          or have been part of our church family for years.
+          It is a joy to have you with us—whether this is your first visit or Shalom
+          has been home for years.
         </p>
-        <blockquote>
-          “Together, we are called to serve, grow, and impact our communities for Christ.”
-        </blockquote>
+        <p className="pastor-byline"><strong>Pastor Melkamu Tadesse</strong><span>SENIOR PASTOR</span></p>
 
         <button
           className="pastor-toggle"
@@ -41,10 +28,19 @@ export default function PastorWelcome() {
           <span>{isOpen ? "CLOSE MESSAGE" : "READ THE FULL WELCOME"}</span>
           <b aria-hidden="true">{isOpen ? "−" : "+"}</b>
         </button>
+      </div>
 
-        <div className={`pastor-message ${isOpen ? "open" : ""}`} id="pastor-full-message">
-          <div>
-            <div className="pastor-message-inner">
+      <div className="pastor-portrait-wrap">
+        <img
+          className="pastor-portrait"
+          src="/pastor-melkamu-cutout.webp"
+          alt="Pastor Melkamu Tadesse preaching at Shalom Ethiopian Evangelical Church"
+        />
+      </div>
+
+      <div className={`pastor-message ${isOpen ? "open" : ""}`} id="pastor-full-message">
+        <div>
+          <div className="pastor-message-inner">
               <p>
                 Welcome to our Shalom Ethiopian Evangelical Church Portland community! It is a joy
                 to have you with us, whether you are visiting for the first time or have been part
@@ -67,7 +63,6 @@ export default function PastorWelcome() {
               </p>
               <p>May God bless you abundantly as you walk in His love and grace.</p>
               <p className="pastor-signoff">In Christ&apos;s service,<br /><strong>Pastor Melkamu Tadesse</strong></p>
-            </div>
           </div>
         </div>
       </div>
