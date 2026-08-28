@@ -13,8 +13,8 @@ const ministries = [
     id: "evangelism",
     title: "Evangelism & Holistic Ministry",
     shortTitle: "Evangelism &\nHolistic Ministry",
-    image: "/ministries/holistic-ministry.webp",
-    imageAlt: "Church members preparing food together as an act of service",
+    image: "/ministries/ministry-community.webp",
+    imageAlt: "Shalom members sharing the hope of Jesus through community outreach",
     intro:
       "Sharing the hope of Christ in word and action while caring for the whole person—body, mind, and spirit.",
     paragraphs: [
@@ -56,8 +56,8 @@ const ministries = [
     id: "brothers",
     title: "Brothers’ Fellowship",
     shortTitle: "Brothers’\nFellowship",
-    image: "/ministries/brothers-fellowship.webp",
-    imageAlt: "A man worshiping during a Shalom gathering",
+    image: "/ministries/holistic-ministry.webp",
+    imageAlt: "Men preparing food together during Brothers’ Fellowship",
     intro:
       "Building godly men who lead with integrity, serve with humility, and encourage one another in Christ.",
     paragraphs: [
