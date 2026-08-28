@@ -27,7 +27,7 @@ export default function SiteFooter() {
           <a href="#services">Services</a>
           <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
-          <a href="#give">Give</a>
+          <GiveDialog className="site-footer-give">Give</GiveDialog>
         </nav>
 
         <div className="site-footer-column site-footer-services">
@@ -60,3 +60,4 @@ export default function SiteFooter() {
     </footer>
   );
 }
+import GiveDialog from "./give-dialog";

@@ -80,6 +80,9 @@ a {
   padding: 13px 24px;
   font-size: 11px;
   letter-spacing: 0.16em;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
 }
 .hero {
   min-height: 650px;
@@ -1477,6 +1480,166 @@ footer small {
 .about-page {
   overflow: hidden;
   background: #f5f0e7;
+}
+
+/* Giving dialog */
+.give-dialog {
+  width: min(1120px, calc(100vw - 48px));
+  max-width: 1120px;
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  display: block;
+  padding: 48px 50px 28px;
+  border: 1px solid rgba(169, 137, 69, .55);
+  border-radius: 0;
+  background: #f4f0e7;
+  color: #242321;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .38);
+  isolation: isolate;
+}
+.give-dialog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .3;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(36, 35, 33, .12) .45px, transparent .45px);
+  background-size: 5px 5px;
+}
+.give-dialog > button[data-slot="dialog-close"] {
+  top: 26px;
+  right: 28px;
+  opacity: 1;
+  color: #242321;
+  background: transparent;
+}
+.give-dialog > button[data-slot="dialog-close"] svg { width: 26px; height: 26px; stroke-width: 1.35; }
+.give-dialog-watermark {
+  position: absolute;
+  top: 66px;
+  right: 54px;
+  z-index: -1;
+  font: 140px/1 Georgia, serif;
+  color: rgba(169, 137, 69, .075);
+  user-select: none;
+}
+.give-dialog-header { position: relative; display: block; text-align: left; }
+.give-dialog-kicker,
+.give-option-kicker {
+  margin: 0 0 12px;
+  color: #94752f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .24em;
+}
+.give-dialog-header [data-slot="dialog-title"] {
+  margin: 0;
+  font: 400 clamp(44px, 5vw, 67px)/.96 Georgia, "Times New Roman", serif;
+  letter-spacing: -.035em;
+}
+.give-dialog-header [data-slot="dialog-description"] {
+  margin: 14px 0 28px;
+  color: #5f5b54;
+  font-size: 15px;
+}
+.give-dialog-options { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.give-option {
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  padding: 36px 30px 28px;
+  border: 1px solid #c8c0b2;
+  background: rgba(255, 255, 255, .16);
+}
+.give-option h3 { margin: 0; font: 400 37px/1.02 Georgia, serif; letter-spacing: -.025em; }
+.give-option > p:not(.give-option-kicker) { max-width: 255px; margin: 16px 0; color: #5f5b54; font-size: 14px; line-height: 1.55; }
+.give-option-rule { display: block; width: 58px; height: 1px; margin: 0 0 18px; background: #a98945; }
+.give-building { padding-bottom: 96px; }
+.give-building-art { position: absolute; inset: 54px 0 70px 48%; pointer-events: none; }
+.give-building-sun { position: absolute; width: 190px; height: 190px; border-radius: 50%; background: rgba(169, 137, 69, .1); }
+.give-building-steeple { position: absolute; left: 78px; top: 35px; height: 147px; padding: 4px 10px; border: 1px solid #8d887f; color: #6a665f; font: 16px Georgia, serif; }
+.give-building-roof { position: absolute; left: 29px; top: 105px; width: 220px; height: 130px; border: 1px solid #8d887f; border-left-width: 7px; transform: skewY(24deg); background: rgba(244, 240, 231, .72); }
+.give-building-wall { position: absolute; left: 104px; top: 128px; width: 112px; height: 105px; border: 1px solid #aaa397; background: repeating-linear-gradient(90deg, transparent 0 20px, rgba(80, 77, 71, .12) 21px); }
+.give-building > a {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 28px;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border: 1px solid #a98945;
+  background: #242321;
+  color: #f4f0e7;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  transition: background .2s ease, color .2s ease;
+}
+.give-building > a:hover,
+.give-building > a:focus-visible { background: #a98945; color: #242321; }
+.give-zelle-rule { display: block; width: 58%; height: 1px; margin: 18px 0; background: rgba(169, 137, 69, .7); }
+.give-zelle-details { display: grid; grid-template-columns: 138px 1fr; gap: 18px; align-items: center; }
+.give-qr-placeholder {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  border: 1px solid #9d968a;
+  color: #242321;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.35;
+  background-color: #f8f5ed;
+  background-image: repeating-conic-gradient(#242321 0 25%, transparent 0 50%);
+  background-size: 14px 14px;
+}
+.give-qr-placeholder span { padding: 8px 5px; background: #f4f0e7; }
+.give-zelle-account { min-height: 52px; display: flex; align-items: center; border: 1px solid #c8c0b2; background: rgba(255,255,255,.35); }
+.give-zelle-account > span { min-width: 0; flex: 1; padding: 10px 12px; color: #68645d; font-size: 11px; }
+.give-zelle-account button { align-self: stretch; width: 48px; display: grid; place-items: center; border: 0; border-left: 1px solid #a98945; color: #a98945; background: transparent; cursor: not-allowed; opacity: .65; }
+.give-zelle-account svg { width: 17px; }
+.give-zelle-note { margin: 13px 0 0; color: #66615a; font: italic 12px/1.45 Georgia, serif; }
+.give-dialog-thanks { margin: 26px 0 0; padding-top: 22px; border-top: 1px solid rgba(169, 137, 69, .55); color: #776329; text-align: center; font: 15px Georgia, serif; }
+.site-footer-give { display: block; padding: 0; border: 0; color: inherit; background: none; font: inherit; text-align: left; cursor: pointer; }
+
+@media (max-width: 760px) {
+  .give-dialog {
+    width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+    padding: 62px 18px 24px;
+  }
+  .give-dialog > button[data-slot="dialog-close"] { position: sticky; top: 0; float: right; margin-top: -44px; margin-right: -2px; z-index: 5; }
+  .give-dialog-watermark { top: 110px; right: -10px; font-size: 90px; }
+  .give-dialog-header [data-slot="dialog-title"] { font-size: clamp(42px, 13vw, 58px); }
+  .give-dialog-header [data-slot="dialog-description"] { max-width: 90%; margin-bottom: 24px; line-height: 1.5; }
+  .give-dialog-options { grid-template-columns: 1fr; gap: 18px; }
+  .give-option { min-height: 0; padding: 28px 20px; }
+  .give-option h3 { font-size: 32px; }
+  .give-building { padding-bottom: 94px; }
+  .give-building-art { inset: 54px -25px 70px 55%; opacity: .72; }
+  .give-building > p:not(.give-option-kicker) { max-width: 55%; }
+  .give-building > a { left: 20px; right: 20px; bottom: 22px; min-height: 48px; font-size: 10px; }
+  .give-zelle-details { grid-template-columns: 116px 1fr; gap: 12px; }
+  .give-zelle-account { min-height: 48px; }
+  .give-zelle-account button { width: 46px; min-width: 46px; }
+  .give-dialog-thanks { line-height: 1.45; }
+}
+
+@media (max-width: 430px) {
+  .give-zelle-details { grid-template-columns: 1fr; }
+  .give-qr-placeholder { width: min(190px, 70vw); margin: 0 auto; }
+  .give-zelle-account > span { font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .give-dialog,
+  .give-dialog * { animation: none !important; transition: none !important; }
 }
 .about-nav .links .active {
   color: var(--gold);
