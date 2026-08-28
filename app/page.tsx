@@ -1,6 +1,7 @@
 import WhatsHappening from "../components/whats-happening";
 import PastorWelcome from "../components/pastor-welcome";
 import GalleryShowcase from "../components/gallery-showcase";
+import SiteFooter from "../components/site-footer";
 
 export default function Home(){return <main>
 <div className="notice">Live worship at 10:00 AM </div>
@@ -47,5 +48,5 @@ export default function Home(){return <main>
         <a href="#contact">CONTACT US <span>→</span></a>
     </div>
 </section>
-<footer id="contact"><div className="footer-brand"><img className="footer-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo"/><h2>EVERY NATION.<br/>ONE FAMILY.</h2></div><div><small>VISIT</small><p>Portland, Oregon<br/>Sundays at 10:00 AM</p></div><div><small>CONNECT</small><p>Plan Your Visit<br/>Request Prayer<br/>Volunteer</p></div><div><small>FOLLOW</small><p>Instagram<br/>YouTube<br/>Facebook</p></div><div className="footer-bottom">© 2026 Shalom Ethiopian Evangelical Church <span>Made for our community.</span></div></footer>
+<SiteFooter />
 </main>}
