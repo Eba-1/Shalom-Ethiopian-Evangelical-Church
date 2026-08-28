@@ -20,13 +20,14 @@ export default function SiteFooter() {
           </p>
         </div>
 
-        <nav className="site-footer-column site-footer-explore" aria-label="Footer navigation">
-          <h2>Explore</h2>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/ministries">Ministries</a>
-          <a href="/#gallery">Gallery</a>
-          <a href="/contact">Contact</a>
+        <nav className="site-footer-column" aria-label="Footer navigation">
+          <h2>Quick Links</h2>
+          <a href="#top">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="/gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <GiveDialog className="site-footer-give">Give</GiveDialog>
         </nav>
 
         <div className="site-footer-column site-footer-contact">

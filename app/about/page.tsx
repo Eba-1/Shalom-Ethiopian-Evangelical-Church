@@ -48,7 +48,7 @@ export default function AboutPage() {
           <a href="/">Home</a>
           <a className="active" href="/about" aria-current="page">About</a>
           <a href="/ministries">Ministries</a>
-          <a href="/#gallery">Gallery</a>
+          <a href="/gallery">Gallery</a>
           <a href="/contact">Contact</a>
         </div>
         <GiveDialog className="give" />

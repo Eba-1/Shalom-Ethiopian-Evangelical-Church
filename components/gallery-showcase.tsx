@@ -70,7 +70,7 @@ export default function GalleryShowcase() {
         ))}
       </div>
 
-      <a className="gallery-story-action" href="#gallery">
+      <a className="gallery-story-action" href="/gallery">
         EXPLORE THE FULL GALLERY <span aria-hidden="true">→</span>
       </a>
     </section>

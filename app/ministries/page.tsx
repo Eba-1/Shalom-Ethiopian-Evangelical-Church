@@ -111,7 +111,7 @@ export default function MinistriesPage() {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a className="active" href="/ministries" aria-current="page">Ministries</a>
-          <a href="/#gallery">Gallery</a>
+          <a href="/gallery">Gallery</a>
           <a href="/contact">Contact</a>
         </div>
         <GiveDialog className="give" />
