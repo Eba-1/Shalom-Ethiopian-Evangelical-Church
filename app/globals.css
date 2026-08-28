@@ -1942,4 +1942,4 @@ footer small {
   .ministry-links a:nth-child(3) { border-right: 1px solid rgba(218, 175, 99, .32); }
   .ministry-links a:nth-child(even) { border-right: 0; }
   .ministry-links a:nth-child(-n+4) { border-bottom: 1px solid rgba(218, 175, 99, .32); }
-}\n
+}
