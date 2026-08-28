@@ -35,6 +35,29 @@ const beliefs = [
   },
 ];
 
+const pastors = [
+  {
+    name: "Melkamu Tadesse",
+    title: "Lead Pastor",
+    image: "/pastors/melkamu-tadesse.webp",
+  },
+  {
+    name: "Tsegaw Fikadu",
+    title: "Pastor",
+    image: "/pastors/tsegaw-fikadu.webp",
+  },
+  {
+    name: "Wossen Tefera",
+    title: "Pastor",
+    image: "/pastors/wossen-tefera.webp",
+  },
+  {
+    name: "Wondwossen Belachew",
+    title: "Pastor",
+    image: "/pastors/wondwossen-belachew.webp",
+  },
+];
+
 export default function AboutPage() {
   return (
     <main className="about-page" id="top">
@@ -113,20 +136,13 @@ export default function AboutPage() {
           <p>Serving together with one heart for Christ and His Church.</p>
         </div>
         <div className="pastor-profiles">
-          <article className="pastor-profile pastor-profile-featured">
-            <div className="pastor-profile-image">
-              <img src="/pastor-melkamu-tadesse.jpg" alt="Pastor Melkamu Tadesse" />
-            </div>
-            <p>Senior Pastor</p>
-            <h3>Pastor Melkamu Tadesse</h3>
-          </article>
-          {[2, 3].map((number) => (
-            <article className="pastor-profile pastor-profile-pending" key={number}>
-              <div className="pastor-profile-placeholder" aria-hidden="true">
-                <span>{String(number).padStart(2, "0")}</span>
+          {pastors.map((pastor) => (
+            <article className="pastor-profile" key={pastor.name}>
+              <div className="pastor-profile-image">
+                <img src={pastor.image} alt={`${pastor.title} ${pastor.name}`} />
               </div>
-              <p>Pastor</p>
-              <h3>Profile coming soon</h3>
+              <p>{pastor.title}</p>
+              <h3>{pastor.name}</h3>
             </article>
           ))}
         </div>
