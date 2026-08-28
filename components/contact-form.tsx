@@ -5,6 +5,8 @@ import { FormEvent, useEffect, useState } from "react";
 export default function ContactForm() {
   const [mounted, setMounted] = useState(false);
   const [showNotice, setShowNotice] = useState(false);
+  const [contactValue, setContactValue] = useState("");
+  const [contactError, setContactError] = useState("");
 
   useEffect(() => {
     setMounted(true);
@@ -12,7 +14,23 @@ export default function ContactForm() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (!isValidEmailOrPhone(contactValue)) {
+      setContactError("Enter a valid email address or phone number.");
+      setShowNotice(false);
+      return;
+    }
+    setContactError("");
     setShowNotice(true);
+  }
+
+  function validateContact(value: string) {
+    if (!value.trim()) {
+      setContactError("Email or phone number is required.");
+    } else if (!isValidEmailOrPhone(value)) {
+      setContactError("Enter a valid email address or phone number.");
+    } else {
+      setContactError("");
+    }
   }
 
   if (!mounted) {
@@ -27,7 +45,24 @@ export default function ContactForm() {
       </label>
       <label>
         <span>EMAIL OR PHONE</span>
-        <input name="contact" autoComplete="email" required />
+        <input
+          name="contact"
+          type="text"
+          value={contactValue}
+          onChange={(event) => {
+            setContactValue(event.target.value);
+            if (contactError) validateContact(event.target.value);
+          }}
+          onBlur={(event) => validateContact(event.target.value)}
+          aria-invalid={contactError ? "true" : "false"}
+          aria-describedby={contactError ? "contact-field-error" : undefined}
+          required
+        />
+        {contactError && (
+          <span className="contact-field-error" id="contact-field-error" role="alert">
+            {contactError}
+          </span>
+        )}
       </label>
       <label>
         <span>MESSAGE</span>
@@ -41,4 +76,14 @@ export default function ContactForm() {
       )}
     </form>
   );
+}
+
+function isValidEmailOrPhone(value: string) {
+  const trimmed = value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  const phoneCharacters = /^\+?[\d\s().-]+$/;
+  const phoneDigits = trimmed.replace(/\D/g, "");
+
+  return emailPattern.test(trimmed)
+    || (phoneCharacters.test(trimmed) && phoneDigits.length >= 10 && phoneDigits.length <= 15);
 }
