@@ -3,9 +3,10 @@ import PastorWelcome from "../components/pastor-welcome";
 import GalleryShowcase from "../components/gallery-showcase";
 import SiteFooter from "../components/site-footer";
 import GiveDialog from "../components/give-dialog";
+import LiveStreamBanner from "../components/live-stream-banner";
 
 export default function Home(){return <main>
-<div className="notice">Live worship at 10:00 AM </div>
+<LiveStreamBanner />
 <nav className="nav">
     <a className="brand" href="#top">
         <img className="brand-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo"/>

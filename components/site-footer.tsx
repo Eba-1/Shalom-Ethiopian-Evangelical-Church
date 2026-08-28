@@ -1,6 +1,6 @@
+import GiveDialog from "./give-dialog";
+
 const youtubeUrl = "https://www.youtube.com/@Shalom-w2h/streams";
-const directionsUrl =
-  "https://www.google.com/maps/search/?api=1&query=5501%20SE%20Thiessen%20Rd%2C%20Portland%2C%20OR%2097267";
 
 export default function SiteFooter() {
   return (
@@ -20,44 +20,34 @@ export default function SiteFooter() {
           </p>
         </div>
 
-        <nav className="site-footer-column" aria-label="Footer navigation">
-          <h2>Quick Links</h2>
-          <a href="#top">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
-          <GiveDialog className="site-footer-give">Give</GiveDialog>
+        <nav className="site-footer-column site-footer-explore" aria-label="Footer navigation">
+          <h2>Explore</h2>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/ministries">Ministries</a>
+          <a href="/#gallery">Gallery</a>
+          <a href="/contact">Contact</a>
         </nav>
 
-        <div className="site-footer-column site-footer-services">
-          <h2>Service Times</h2>
-          <p><strong>Wednesday</strong><span>Midweek Service · 6:00–8:00 PM</span></p>
-          <p><strong>Friday</strong><span>Online Prayer · 8:00–10:00 PM</span></p>
-          <p><strong>Sunday</strong><span>Morning Prayer · 9:00–10:00 AM</span></p>
-          <p><strong>Sunday</strong><span>Worship Service · 10:00 AM–12:30 PM</span></p>
-          <p><strong>Sunday</strong><span>Young Adults · 1:30–3:00 PM</span></p>
-        </div>
-
         <div className="site-footer-column site-footer-contact">
-          <h2>Contact Us</h2>
-          <a href={directionsUrl} target="_blank" rel="noreferrer">
+          <h2>Connect</h2>
+          <a href="/contact">
             5501 SE Thiessen Rd<br />Portland, OR 97267
           </a>
-          <h2 className="site-footer-follow-title">Follow Us</h2>
-          <div className="site-footer-socials" aria-label="Social media links">
-            <span>Facebook</span>
-            <a href={youtubeUrl} target="_blank" rel="noreferrer">YouTube</a>
-            <span>TikTok</span>
-          </div>
+          <a href={youtubeUrl} target="_blank" rel="noreferrer">YouTube</a>
+        </div>
+
+        <div className="site-footer-invitation">
+          <p>There is a<br />place for <em>you</em> here.</p>
+          <GiveDialog className="site-footer-give">GIVE <span aria-hidden="true">→</span></GiveDialog>
         </div>
       </div>
 
       <div className="site-footer-bottom">
         <span>© 2026 Shalom Ethiopian Evangelical Church</span>
+        <a className="site-footer-top" href="#top" aria-label="Back to top">↑</a>
         <span>Portland, Oregon</span>
       </div>
     </footer>
   );
 }
-import GiveDialog from "./give-dialog";
