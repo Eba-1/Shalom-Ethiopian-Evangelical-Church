@@ -33,8 +33,8 @@ export default function PastorWelcome() {
       <div className="pastor-portrait-wrap">
         <img
           className="pastor-portrait"
-          src="/pastor-melkamu-cutout.webp"
-          alt="Pastor Melkamu Tadesse preaching at Shalom Ethiopian Evangelical Church"
+          src="/pastor-melkamu-and-wife-welcome.webp"
+          alt="Pastor Melkamu Tadesse and his wife"
         />
       </div>
 
