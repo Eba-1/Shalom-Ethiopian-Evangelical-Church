@@ -58,6 +58,21 @@ const pastors = [
   },
 ];
 
+const boardMembers = [
+  {
+    role: "President",
+    name: "Senior Pastor Melkamu Tadesse",
+  },
+  {
+    role: "Treasurer",
+    name: "Hana B.",
+  },
+  {
+    role: "Secretary",
+    name: "Wossen Tefera",
+  },
+];
+
 export default function AboutPage() {
   return (
     <main className="about-page" id="top">
@@ -146,6 +161,41 @@ export default function AboutPage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="about-board" aria-labelledby="board-title">
+        <span className="board-watermark" aria-hidden="true">LEADERSHIP</span>
+        <div className="board-heading">
+          <p className="about-kicker">CHURCH LEADERSHIP</p>
+          <h2 id="board-title">Board &amp; Elders</h2>
+          <div className="board-rule" aria-hidden="true"><span /></div>
+        </div>
+
+        <div className="board-members">
+          {boardMembers.map((member, index) => (
+            <article className="board-member" key={member.role}>
+              <div className="board-photo-placeholder" aria-label={`${member.name} portrait placeholder`}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <small>Portrait coming soon</small>
+              </div>
+              <p>{member.role}</p>
+              <h3>{member.name}</h3>
+            </article>
+          ))}
+        </div>
+
+        <article className="elders-feature">
+          <div className="elders-photo-placeholder" aria-label="Elders group photo placeholder">
+            <span>GROUP PHOTO</span>
+            <small>Coming soon</small>
+          </div>
+          <div className="elders-copy">
+            <p>OUR ELDERS</p>
+            <h3>Serving with<br />wisdom and care.</h3>
+            <div className="elders-rule" aria-hidden="true"><span /></div>
+            <p>Serving our church family through prayer, spiritual guidance, wisdom, and care.</p>
+          </div>
+        </article>
       </section>
 
       <section className="about-community" aria-labelledby="community-title">
