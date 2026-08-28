@@ -11,7 +11,7 @@ export default function Home(){return <main>
         <span>SHALOM ETHIOPIAN<br></br> EVANGELICAL <br/><b>CHURCH</b></span>
     </a>
     <div className="links">
-        <a href="#about">About</a>
+        <a href="/about">About</a>
         <a href="#services">Services</a>
         <a href="#community">Community</a>
         <a href="#lessons">Lessons</a>
