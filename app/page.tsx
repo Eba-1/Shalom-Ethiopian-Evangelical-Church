@@ -2,7 +2,6 @@ import WhatsHappening from "../components/whats-happening";
 import PastorWelcome from "../components/pastor-welcome";
 import GalleryShowcase from "../components/gallery-showcase";
 
-const events = [["30","AUG","Sunday Worship","10:00 AM · Main Sanctuary"],["05","SEP","Community Welcome Dinner","6:00 PM · Fellowship Hall"],["12","SEP","Young Adults Gathering","7:00 PM · Community Room"]];
 export default function Home(){return <main>
 <div className="notice">Live worship at 10:00 AM </div>
 <nav className="nav">
@@ -35,7 +34,18 @@ export default function Home(){return <main>
 <WhatsHappening />
 <PastorWelcome />
 <GalleryShowcase />
-<section className="community" id="community"><div className="community-copy"><p className="eyebrow gold">HERE FOR OUR CITY</p><h2>New here?<br/>You’re not <em>alone.</em></h2><p>Whether you just arrived or have called this city home for years, our community is ready to walk beside you.</p><a className="primary gold-btn" href="#">EXPLORE COMMUNITY SUPPORT →</a></div><div className="resource-grid"><article><span>01</span><h3>Newcomer support</h3><p>Local orientation, transportation, schools, and practical guidance.</p></article><article><span>02</span><h3>Work & education</h3><p>Employment resources, language classes, and skill-building support.</p></article><article><span>03</span><h3>Family connection</h3><p>Groups, youth programs, childcare information, and community care.</p></article><article><span>04</span><h3>Request support</h3><p>A private and respectful way to tell us how we can help.</p></article></div></section>
-<section className="events" id="services"><div className="section-head"><div><p className="eyebrow dark">COMING UP</p><h2>Gather with <em>us.</em></h2></div><a href="#">VIEW ALL EVENTS →</a></div>{events.map(e=><article className="event" key={e[2]}><div className="date"><b>{e[0]}</b><span>{e[1]}</span></div><h3>{e[2]}</h3><p>{e[3]}</p><button aria-label={`View ${e[2]}`}>→</button></article>)}</section>
+<section className="closing-invitation" id="connect" aria-labelledby="closing-invitation-title">
+    <span className="closing-word" aria-hidden="true">WELCOME</span>
+    <div className="closing-copy">
+        <p className="eyebrow gold">COME AS YOU ARE</p>
+        <h2 id="closing-invitation-title">There’s a place<br/>for you <em>here.</em></h2>
+        <p>Join us this Sunday, worship with us online, or reach out. We would love to welcome you and help you take your next step.</p>
+    </div>
+    <div className="closing-actions">
+        <a className="closing-primary" href="https://www.google.com/maps/search/?api=1&query=5501%20SE%20Thiessen%20Rd%2C%20Portland%2C%20OR%2097267" target="_blank" rel="noreferrer">GET DIRECTIONS <span>↗</span></a>
+        <a href="https://www.youtube.com/@Shalom-w2h/streams" target="_blank" rel="noreferrer">WATCH LIVE <span>→</span></a>
+        <a href="#contact">CONTACT US <span>→</span></a>
+    </div>
+</section>
 <footer id="contact"><div className="footer-brand"><img className="footer-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo"/><h2>EVERY NATION.<br/>ONE FAMILY.</h2></div><div><small>VISIT</small><p>Portland, Oregon<br/>Sundays at 10:00 AM</p></div><div><small>CONNECT</small><p>Plan Your Visit<br/>Request Prayer<br/>Volunteer</p></div><div><small>FOLLOW</small><p>Instagram<br/>YouTube<br/>Facebook</p></div><div className="footer-bottom">© 2026 Shalom Ethiopian Evangelical Church <span>Made for our community.</span></div></footer>
 </main>}

@@ -776,6 +776,93 @@ footer small {
   background: #9a4e2d;
   transform: translateY(-3px);
 }
+.closing-invitation {
+  position: relative;
+  min-height: 620px;
+  padding: 105px 7vw 95px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+  align-items: end;
+  gap: 8vw;
+  overflow: hidden;
+  color: #f5efe4;
+  background: radial-gradient(circle at 78% 25%, #343b39 0, #202725 35%, #151b1a 78%);
+  border-bottom: 1px solid rgba(218, 173, 91, .24);
+}
+.closing-invitation::after {
+  content: "";
+  position: absolute;
+  right: -13vw;
+  top: -20vw;
+  width: min(62vw, 920px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(218, 173, 91, .5);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.closing-word {
+  position: absolute;
+  left: -1vw;
+  top: 20px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(218, 173, 91, .13);
+  font: 400 clamp(120px, 20vw, 310px)/1 Georgia, serif;
+  letter-spacing: -.08em;
+  pointer-events: none;
+}
+.closing-copy,
+.closing-actions {
+  position: relative;
+  z-index: 2;
+}
+.closing-copy h2 {
+  margin: 17px 0 26px;
+  font: 400 clamp(62px, 7vw, 108px)/.9 Georgia, serif;
+  letter-spacing: -.055em;
+}
+.closing-copy h2 em {
+  color: #d6a54f;
+  font-weight: 400;
+}
+.closing-copy > p:last-child {
+  max-width: 610px;
+  margin: 0;
+  color: #c8c8c0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.closing-actions {
+  border-top: 1px solid rgba(245, 239, 228, .28);
+}
+.closing-actions a {
+  padding: 22px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(245, 239, 228, .28);
+  color: #f5efe4;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  transition: color .3s ease, padding .3s ease, background .3s ease;
+}
+.closing-actions a:hover {
+  padding-left: 18px;
+  padding-right: 18px;
+  color: #e4bc70;
+  background: rgba(255, 255, 255, .035);
+}
+.closing-actions .closing-primary {
+  color: #191f1e;
+  background: #d6a54f;
+  border-color: #d6a54f;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.closing-actions .closing-primary:hover {
+  color: #191f1e;
+  background: #e5bb6d;
+}
 @keyframes gallery-line-draw {
   to { stroke-dashoffset: 0; }
 }
@@ -1073,6 +1160,15 @@ footer p {
   .gallery-story-action {
     margin: 28px 0 0;
   }
+  .closing-invitation {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 90px 7vw 80px;
+    gap: 52px;
+  }
+  .closing-actions {
+    max-width: 620px;
+  }
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1225,6 +1321,19 @@ footer p {
     min-width: 0;
     width: 100%;
     margin-top: 25px;
+  }
+  .closing-invitation {
+    padding: 78px 7vw 68px;
+  }
+  .closing-copy h2 {
+    font-size: 58px;
+  }
+  .closing-copy > p:last-child {
+    font-size: 14px;
+  }
+  .closing-word {
+    top: 32px;
+    font-size: 34vw;
   }
   .pastor-welcome {
     grid-template-columns: 1fr;
