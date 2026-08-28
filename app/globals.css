@@ -2968,27 +2968,24 @@ footer small {
   border: 1px solid rgba(190, 149, 89, .7);
   background: rgba(251, 248, 241, .72);
 }
-.board-photo-placeholder {
+.board-photo {
   height: 255px;
   margin: 9px 9px 0;
-  display: grid;
-  place-content: center;
-  gap: 11px;
-  color: rgba(255, 255, 255, .8);
-  text-align: center;
-  background: linear-gradient(145deg, #ded7cc, #cfc5b7);
+  overflow: hidden;
+  background: #d8d0c5;
 }
-.board-photo-placeholder span {
-  font: 400 88px/.9 Georgia, serif;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, .72);
-  color: transparent;
+.board-photo img,
+.elders-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .65s cubic-bezier(.2, .7, .2, 1), filter .65s ease;
 }
-.board-photo-placeholder small,
-.elders-photo-placeholder small {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+.board-member:hover .board-photo img,
+.elders-feature:hover .elders-photo img {
+  transform: scale(1.025);
+  filter: saturate(1.04) contrast(1.02);
 }
 .board-member > p {
   margin: 18px 24px 5px;
@@ -3016,20 +3013,10 @@ footer small {
   grid-template-columns: 58% 42%;
   border: 1px solid #be9559;
 }
-.elders-photo-placeholder {
+.elders-photo {
   min-height: 330px;
-  display: grid;
-  place-content: center;
-  gap: 12px;
-  color: rgba(255, 255, 255, .84);
-  text-align: center;
-  background: linear-gradient(145deg, #ded7cc, #c8beb0);
-}
-.elders-photo-placeholder span {
-  font: 400 clamp(34px, 5vw, 72px)/1 Georgia, serif;
-  letter-spacing: -.035em;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, .72);
-  color: transparent;
+  overflow: hidden;
+  background: #c8beb0;
 }
 .elders-copy {
   padding: 50px clamp(32px, 4vw, 62px);
@@ -3171,7 +3158,7 @@ footer small {
   .board-members { grid-template-columns: repeat(2, 1fr); }
   .board-member:last-child { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; }
   .elders-feature { grid-template-columns: 1fr; }
-  .elders-photo-placeholder { min-height: 310px; }
+  .elders-photo { min-height: 310px; }
   .ministry-links { grid-template-columns: repeat(3, 1fr); }
   .ministry-links a:nth-child(3) { border-right: 0; }
   .ministry-links a:nth-child(-n+3) { border-bottom: 1px solid rgba(218, 175, 99, .32); }
@@ -3197,9 +3184,9 @@ footer small {
   .board-heading h2 { font-size: 49px; }
   .board-members { grid-template-columns: 1fr; gap: 24px; }
   .board-member:last-child { grid-column: auto; width: 100%; }
-  .board-photo-placeholder { height: 300px; }
+  .board-photo { height: 300px; }
   .elders-feature { margin-top: 58px; }
-  .elders-photo-placeholder { min-height: 260px; }
+  .elders-photo { min-height: 260px; }
   .elders-copy { padding: 42px 28px 46px; }
   .about-community-content { padding: 65px 6vw 55px; }
   .about-community h2 { font-size: 49px; }

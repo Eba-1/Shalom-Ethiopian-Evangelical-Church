@@ -62,14 +62,20 @@ const boardMembers = [
   {
     role: "President",
     name: "Senior Pastor Melkamu Tadesse",
+    image: "/board/melkamu-tadesse-president.webp",
+    alt: "Senior Pastor Melkamu Tadesse, President of the church board",
   },
   {
     role: "Treasurer",
     name: "Hana B.",
+    image: "/board/hana-b-treasurer.webp",
+    alt: "Hana B., Treasurer of the church board",
   },
   {
     role: "Secretary",
     name: "Wossen Tefera",
+    image: "/board/wossen-tefera-secretary.webp",
+    alt: "Wossen Tefera, Secretary of the church board",
   },
 ];
 
@@ -172,11 +178,10 @@ export default function AboutPage() {
         </div>
 
         <div className="board-members">
-          {boardMembers.map((member, index) => (
+          {boardMembers.map((member) => (
             <article className="board-member" key={member.role}>
-              <div className="board-photo-placeholder" aria-label={`${member.name} portrait placeholder`}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <small>Portrait coming soon</small>
+              <div className="board-photo">
+                <img src={member.image} alt={member.alt} />
               </div>
               <p>{member.role}</p>
               <h3>{member.name}</h3>
@@ -185,9 +190,8 @@ export default function AboutPage() {
         </div>
 
         <article className="elders-feature">
-          <div className="elders-photo-placeholder" aria-label="Elders group photo placeholder">
-            <span>GROUP PHOTO</span>
-            <small>Coming soon</small>
+          <div className="elders-photo">
+            <img src="/board/elders-group.webp" alt="The elders of Shalom Ethiopian Evangelical Church" />
           </div>
           <div className="elders-copy">
             <p>OUR ELDERS</p>
