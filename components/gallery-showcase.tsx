@@ -40,8 +40,8 @@ export default function GalleryShowcase() {
         <div>
           <p className="gallery-story-eyebrow">LIFE AT SHALOM</p>
           <h2 id="gallery-story-title">Faith in motion.</h2>
+          <p className="gallery-story-intro">Moments of worship, community, and grace.</p>
         </div>
-        <p>Moments of worship, community, and grace.</p>
       </div>
 
       <div className="gallery-story-canvas">
