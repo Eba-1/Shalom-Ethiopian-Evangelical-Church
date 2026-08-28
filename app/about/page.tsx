@@ -1,3 +1,5 @@
+import SiteFooter from "../../components/site-footer";
+
 export const metadata = {
   title: "About Shalom | Shalom Ethiopian Evangelical Church",
   description:
@@ -165,7 +167,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <footer id="contact"><div className="footer-brand"><img className="footer-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo"/><h2>EVERY NATION.<br/>ONE FAMILY.</h2></div><div><small>VISIT</small><p>Portland, Oregon<br/>Sundays at 10:00 AM</p></div><div><small>CONNECT</small><p>Plan Your Visit<br/>Request Prayer<br/>Volunteer</p></div><div><small>FOLLOW</small><p>Instagram<br/>YouTube<br/>Facebook</p></div><div className="footer-bottom">© 2026 Shalom Ethiopian Evangelical Church <span>Made for our community.</span></div></footer>
+      <SiteFooter />
     </main>
   );
 }
