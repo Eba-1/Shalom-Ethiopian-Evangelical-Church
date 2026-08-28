@@ -158,17 +158,6 @@ export default function MinistriesPage() {
         ))}
       </div>
 
-      <section className="ministries-cta" aria-labelledby="ministries-cta-title">
-        <span className="ministries-cta-flourish" aria-hidden="true">❧</span>
-        <p className="ministries-kicker">TAKE YOUR NEXT STEP</p>
-        <h2 id="ministries-cta-title">There’s a place for you here.</h2>
-        <p>Wherever you are in your journey, we would love to help you find a community where you can grow and serve.</p>
-        <div>
-          <a className="ministries-cta-primary" href="/contact">CONTACT US <span>→</span></a>
-          <a href="/contact?topic=ministry">CONTACT A MINISTRY <span>→</span></a>
-        </div>
-      </section>
-
       <SiteFooter />
     </main>
   );
