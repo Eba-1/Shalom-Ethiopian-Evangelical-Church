@@ -11,12 +11,11 @@ export default function Home(){return <main>
         <span>SHALOM ETHIOPIAN<br></br> EVANGELICAL <br/><b>CHURCH</b></span>
     </a>
     <div className="links">
+        <a href="#top">Home</a>
         <a href="/about">About</a>
-        <a href="#services">Services</a>
-        <a href="#community">Community</a>
-        <a href="#lessons">Lessons</a>
+        <a href="/ministries">Ministries</a>
         <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a></div>
+        <a href="/contact">Contact</a></div>
         <a className="give" href="#give">GIVE</a></nav>
 <section className="hero" id="top">
     <div className="hero-slideshow" aria-hidden="true">

@@ -33,15 +33,6 @@ const beliefs = [
   },
 ];
 
-const ministries = [
-  ["01", "Children"],
-  ["02", "Young Adults"],
-  ["03", "Men’s Fellowship"],
-  ["04", "Women’s Fellowship"],
-  ["05", "Prayer & Care"],
-  ["06", "Worship & Media"],
-];
-
 export default function AboutPage() {
   return (
     <main className="about-page" id="top">
@@ -54,10 +45,9 @@ export default function AboutPage() {
         <div className="links">
           <a href="/">Home</a>
           <a className="active" href="/about" aria-current="page">About</a>
-          <a href="/#services">Services</a>
-          <a href="/#community">Community</a>
+          <a href="/ministries">Ministries</a>
           <a href="/#gallery">Gallery</a>
-          <a href="/#contact">Contact</a>
+          <a href="/contact">Contact</a>
         </div>
         <a className="give" href="/#give">GIVE</a>
       </nav>
@@ -159,11 +149,8 @@ export default function AboutPage() {
         <div className="about-community-content">
           <p className="about-kicker">LIFE AT SHALOM</p>
           <h2 id="community-title">Find Your Place at Shalom</h2>
-          <div className="ministry-links">
-            {ministries.map(([number, name]) => (
-              <a href="/about#community-title" key={name}><span>{number}</span><strong>{name}</strong></a>
-            ))}
-          </div>
+          <p className="about-community-copy">Whether you’re looking for fellowship, spiritual growth, a place to serve, or support, we would love to help you find where you belong.</p>
+          <a className="about-community-cta" href="/contact">FIND YOUR PLACE <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
