@@ -1,7 +1,3 @@
-import GiveDialog from "./give-dialog";
-
-const youtubeUrl = "https://www.youtube.com/@Shalom-w2h/streams";
-
 export default function SiteFooter() {
   return (
     <footer className="site-footer" id="contact">

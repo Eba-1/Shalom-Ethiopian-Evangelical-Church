@@ -1070,7 +1070,7 @@ footer small {
 }
 .site-footer-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.7fr 1.25fr 1fr;
+  grid-template-columns: minmax(280px, 1.4fr) minmax(150px, 0.65fr) minmax(260px, 1fr);
   gap: clamp(30px, 5vw, 76px);
   max-width: 1320px;
   margin: 0 auto;
