@@ -1,4 +1,5 @@
 import SiteFooter from "../../components/site-footer";
+import GiveDialog from "../../components/give-dialog";
 
 export const metadata = {
   title: "About Shalom | Shalom Ethiopian Evangelical Church",
@@ -49,7 +50,7 @@ export default function AboutPage() {
           <a href="/#gallery">Gallery</a>
           <a href="/contact">Contact</a>
         </div>
-        <a className="give" href="/#give">GIVE</a>
+        <GiveDialog className="give" />
       </nav>
 
       <section className="about-hero" aria-labelledby="about-title">

@@ -2,6 +2,7 @@ import WhatsHappening from "../components/whats-happening";
 import PastorWelcome from "../components/pastor-welcome";
 import GalleryShowcase from "../components/gallery-showcase";
 import SiteFooter from "../components/site-footer";
+import GiveDialog from "../components/give-dialog";
 
 export default function Home(){return <main>
 <div className="notice">Live worship at 10:00 AM </div>
@@ -16,7 +17,7 @@ export default function Home(){return <main>
         <a href="/ministries">Ministries</a>
         <a href="#gallery">Gallery</a>
         <a href="/contact">Contact</a></div>
-        <a className="give" href="#give">GIVE</a></nav>
+        <GiveDialog className="give" /></nav>
 <section className="hero" id="top">
     <div className="hero-slideshow" aria-hidden="true">
         <img className="hero-slide hero-slide-one" src="/shalom-hero-community.jpg" alt=""/>
