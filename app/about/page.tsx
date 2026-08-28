@@ -61,7 +61,7 @@ const pastors = [
 const boardMembers = [
   {
     role: "President",
-    name: "Senior Pastor Melkamu Tadesse",
+    name: "Senior Pastor Melkamu T.",
     image: "/board/melkamu-tadesse-president.webp",
     alt: "Senior Pastor Melkamu Tadesse, President of the church board",
   },
@@ -73,7 +73,7 @@ const boardMembers = [
   },
   {
     role: "Secretary",
-    name: "Wossen Tefera",
+    name: "Pastor Wossen T.",
     image: "/board/wossen-tefera-secretary.webp",
     alt: "Wossen Tefera, Secretary of the church board",
   },
