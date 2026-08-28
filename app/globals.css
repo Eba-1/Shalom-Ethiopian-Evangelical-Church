@@ -3092,6 +3092,9 @@ footer small {
   display: grid;
   gap: 24px;
 }
+.contact-form-placeholder {
+  min-height: 388px;
+}
 .contact-form label {
   display: grid;
   gap: 9px;

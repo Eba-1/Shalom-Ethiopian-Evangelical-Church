@@ -1,5 +1,6 @@
 import FullGallery from "../../components/full-gallery";
 import GiveDialog from "../../components/give-dialog";
+import LiveStreamBanner from "../../components/live-stream-banner";
 import SiteFooter from "../../components/site-footer";
 
 export const metadata = {
@@ -10,7 +11,7 @@ export const metadata = {
 export default function GalleryPage() {
   return (
     <main className="gallery-page" id="top">
-      <div className="notice">Live worship at 10:00 AM</div>
+      <LiveStreamBanner />
       <nav className="nav gallery-nav" aria-label="Main navigation">
         <a className="brand" href="/">
           <img className="brand-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo" />
