@@ -84,6 +84,25 @@ a {
   background: transparent;
   cursor: pointer;
 }
+.mobile-menu-trigger { display: none; }
+.mobile-menu {
+  width: min(88vw, 390px) !important;
+  border: 0 !important;
+  background: #f3efe5 !important;
+  color: var(--ink);
+  padding: 0 !important;
+  gap: 0 !important;
+}
+.mobile-menu-header { padding: 42px 34px 28px !important; border-bottom: 1px solid rgba(23, 27, 27, .14); }
+.mobile-menu-header img { width: 46px; height: 54px; margin-bottom: 18px; object-fit: contain; }
+.mobile-menu-header [data-slot="sheet-title"] { font: 400 27px/1.05 Georgia, serif; letter-spacing: -.02em; }
+.mobile-menu-header [data-slot="sheet-description"] { margin-top: 8px; color: #68645d; font-size: 12px; }
+.mobile-menu-links { display: flex; flex-direction: column; padding: 18px 34px; }
+.mobile-menu-links a { display: flex; align-items: baseline; gap: 18px; padding: 14px 0; border-bottom: 1px solid rgba(23, 27, 27, .12); font: 400 26px/1.1 Georgia, serif; }
+.mobile-menu-links a span { color: #a36b47; font: 700 9px/1 Arial, sans-serif; letter-spacing: .12em; }
+.mobile-menu-links a.active { color: #a36b47; }
+.mobile-menu-give { padding: 10px 34px 34px; }
+.mobile-menu-give .give { width: 100%; padding: 15px 24px; border-color: #a36b47; color: var(--ink); }
 .hero {
   min-height: 650px;
   background: var(--ink);
@@ -1188,9 +1207,21 @@ footer small {
   .links {
     display: none;
   }
-  .give {
-    margin-left: auto;
+  .desktop-give {
+    display: none;
   }
+  .mobile-menu-trigger {
+    display: inline-grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin-left: auto;
+    border: 1px solid rgba(200, 155, 75, .72);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  }
+  .mobile-menu-trigger svg { width: 22px; height: 22px; stroke-width: 1.5; }
   .hero-content {
     padding: 70px 6vw 45px;
   }
@@ -1327,7 +1358,11 @@ footer small {
   }
   .nav {
     height: 70px;
+    padding: 0 4vw;
   }
+  .brand { gap: 8px; font-size: 9px; letter-spacing: .11em; }
+  .brand-logo { width: 36px; height: 44px; }
+  .mobile-menu-trigger { width: 42px; height: 42px; }
   .hero h1 {
     font-size: 62px;
   }

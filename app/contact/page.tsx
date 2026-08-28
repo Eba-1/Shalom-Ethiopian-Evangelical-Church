@@ -1,7 +1,7 @@
 import ContactForm from "../../components/contact-form";
-import GiveDialog from "../../components/give-dialog";
 import LiveStreamBanner from "../../components/live-stream-banner";
 import SiteFooter from "../../components/site-footer";
+import SiteHeader from "../../components/site-header";
 
 export const metadata = {
   title: "Contact Shalom | Shalom Ethiopian Evangelical Church",
@@ -12,20 +12,7 @@ export default function ContactPage() {
   return (
     <main className="contact-page" id="top">
       <LiveStreamBanner />
-      <nav className="nav contact-nav" aria-label="Main navigation">
-        <a className="brand" href="/">
-          <img className="brand-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo" />
-          <span>SHALOM ETHIOPIAN<br /> EVANGELICAL <br /><b>CHURCH</b></span>
-        </a>
-        <div className="links">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/ministries">Ministries</a>
-          <a href="/#gallery">Gallery</a>
-          <a className="active" href="/contact" aria-current="page">Contact</a>
-        </div>
-        <GiveDialog className="give" />
-      </nav>
+      <SiteHeader active="contact" />
 
       <section className="contact-main" aria-labelledby="contact-title">
         <div className="contact-copy">

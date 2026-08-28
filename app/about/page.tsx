@@ -1,6 +1,6 @@
 import SiteFooter from "../../components/site-footer";
-import GiveDialog from "../../components/give-dialog";
 import LiveStreamBanner from "../../components/live-stream-banner";
+import SiteHeader from "../../components/site-header";
 
 export const metadata = {
   title: "About Shalom | Shalom Ethiopian Evangelical Church",
@@ -39,20 +39,7 @@ export default function AboutPage() {
   return (
     <main className="about-page" id="top">
       <LiveStreamBanner />
-      <nav className="nav about-nav" aria-label="Main navigation">
-        <a className="brand" href="/">
-          <img className="brand-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo" />
-          <span>SHALOM ETHIOPIAN<br /> EVANGELICAL <br /><b>CHURCH</b></span>
-        </a>
-        <div className="links">
-          <a href="/">Home</a>
-          <a className="active" href="/about" aria-current="page">About</a>
-          <a href="/ministries">Ministries</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/contact">Contact</a>
-        </div>
-        <GiveDialog className="give" />
-      </nav>
+      <SiteHeader active="about" />
 
       <section className="about-hero" aria-labelledby="about-title">
         <span className="about-hero-watermark" aria-hidden="true">SHALOM</span>
