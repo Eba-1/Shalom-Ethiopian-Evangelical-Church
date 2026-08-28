@@ -38,7 +38,7 @@ const beliefs = [
 const pastors = [
   {
     name: "Melkamu Tadesse",
-    title: "Lead Pastor",
+    title: "Senior Pastor",
     image: "/pastors/melkamu-tadesse.webp",
   },
   {
