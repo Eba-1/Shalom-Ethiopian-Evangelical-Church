@@ -15,7 +15,7 @@ export default function Home(){return <main>
         <a href="#top">Home</a>
         <a href="/about">About</a>
         <a href="/ministries">Ministries</a>
-        <a href="#gallery">Gallery</a>
+        <a href="/gallery">Gallery</a>
         <a href="/contact">Contact</a></div>
         <GiveDialog className="give" /></nav>
 <section className="hero" id="top">
