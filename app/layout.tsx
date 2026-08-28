@@ -5,8 +5,9 @@ export const metadata: Metadata = {
   title: "Church Community Website Concept",
   description: "An urban, welcoming church website concept centered on worship, community, and belonging.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/shalom-church-logo.png",
+    shortcut: "/shalom-church-logo.png",
+    apple: "/shalom-church-logo.png"
   },
 };
 
