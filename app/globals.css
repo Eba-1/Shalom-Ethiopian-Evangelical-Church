@@ -1070,7 +1070,7 @@ footer small {
 }
 .site-footer-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.7fr 1.25fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(30px, 5vw, 76px);
   max-width: 1320px;
   margin: 0 auto;
@@ -1136,6 +1136,30 @@ footer small {
 }
 .site-footer-contact > a {
   margin-bottom: 12px;
+}
+.site-footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.site-footer-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(163, 107, 71, .42);
+}
+.site-footer-map-link svg,
+.site-footer-social-link svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  color: #a36b47;
+  stroke-width: 1.7;
+}
+.site-footer-brand-icon {
+  fill: currentColor;
+  stroke: none;
 }
 .site-footer-column .site-footer-follow-title {
   margin: 6px 0 5px;
