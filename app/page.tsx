@@ -2,23 +2,12 @@ import WhatsHappening from "../components/whats-happening";
 import PastorWelcome from "../components/pastor-welcome";
 import GalleryShowcase from "../components/gallery-showcase";
 import SiteFooter from "../components/site-footer";
-import GiveDialog from "../components/give-dialog";
 import LiveStreamBanner from "../components/live-stream-banner";
+import SiteHeader from "../components/site-header";
 
 export default function Home(){return <main>
 <LiveStreamBanner />
-<nav className="nav">
-    <a className="brand" href="#top">
-        <img className="brand-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo"/>
-        <span>SHALOM ETHIOPIAN<br></br> EVANGELICAL <br/><b>CHURCH</b></span>
-    </a>
-    <div className="links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/ministries">Ministries</a>
-        <a href="/gallery">Gallery</a>
-        <a href="/contact">Contact</a></div>
-        <GiveDialog className="give" /></nav>
+<SiteHeader active="home" />
 <section className="hero" id="top">
     <div className="hero-slideshow" aria-hidden="true">
         <img className="hero-slide hero-slide-one" src="/shalom-hero-community.jpg" alt=""/>
