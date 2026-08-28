@@ -1,17 +1,26 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 export default function ContactForm() {
+  const [mounted, setMounted] = useState(false);
   const [showNotice, setShowNotice] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setShowNotice(true);
   }
 
+  if (!mounted) {
+    return <div className="contact-form contact-form-placeholder" aria-hidden="true" />;
+  }
+
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" onSubmit={handleSubmit} suppressHydrationWarning>
       <label>
         <span>FULL NAME</span>
         <input name="name" autoComplete="name" required />
