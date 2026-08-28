@@ -2452,7 +2452,9 @@ footer small {
 .give-qr-placeholder span { padding: 8px 5px; background: #f4f0e7; }
 .give-zelle-account { min-height: 52px; display: flex; align-items: center; border: 1px solid #c8c0b2; background: rgba(255,255,255,.35); }
 .give-zelle-account > span { min-width: 0; flex: 1; padding: 10px 12px; color: #68645d; font-size: 11px; }
-.give-zelle-account button { align-self: stretch; width: 48px; display: grid; place-items: center; border: 0; border-left: 1px solid #a98945; color: #a98945; background: transparent; cursor: not-allowed; opacity: .65; }
+.give-zelle-account button { align-self: stretch; width: 48px; display: grid; place-items: center; border: 0; border-left: 1px solid #a98945; color: #a98945; background: transparent; cursor: pointer; transition: color .2s ease, background .2s ease; }
+.give-zelle-account button:hover,
+.give-zelle-account button:focus-visible { color: #fffaf0; background: #a98945; }
 .give-zelle-account svg { width: 17px; }
 .give-zelle-note { margin: 13px 0 0; color: #66615a; font: italic 12px/1.45 Georgia, serif; }
 .give-dialog-thanks { margin: 26px 0 0; padding-top: 22px; border-top: 1px solid rgba(169, 137, 69, .55); color: #776329; text-align: center; font: 15px Georgia, serif; }
@@ -3146,6 +3148,16 @@ footer small {
   border-color: #9c4c36;
   background: #efeeea;
   box-shadow: 0 0 0 3px rgba(156, 76, 54, .11);
+}
+.contact-form input[aria-invalid="true"] {
+  border-color: #9f3f35;
+  box-shadow: 0 0 0 3px rgba(159, 63, 53, .1);
+}
+.contact-field-error {
+  margin-top: -3px;
+  color: #8d312b;
+  font: 600 12px/1.35 Arial, sans-serif;
+  letter-spacing: 0;
 }
 .contact-form button {
   width: fit-content;

@@ -1,6 +1,7 @@
 "use client";
 
 import { Copy } from "lucide-react";
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -15,7 +16,17 @@ type GiveDialogProps = {
   children?: React.ReactNode;
 };
 
+const zelleNumber = "+1 503 432 9069";
+
 export default function GiveDialog({ className, children = "GIVE" }: GiveDialogProps) {
+  const [copied, setCopied] = useState(false);
+
+  async function copyZelleNumber() {
+    await navigator.clipboard.writeText(zelleNumber);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 2000);
+  }
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -58,12 +69,14 @@ export default function GiveDialog({ className, children = "GIVE" }: GiveDialogP
               </div>
               <div className="give-zelle-info">
                 <div className="give-zelle-account">
-                  <span>Phone or email will appear here</span>
-                  <button type="button" disabled aria-label="Copy Zelle information; available when payment details are added">
+                  <span>{zelleNumber}</span>
+                  <button type="button" onClick={copyZelleNumber} aria-label="Copy Shalom Zelle phone number">
                     <Copy aria-hidden="true" />
                   </button>
                 </div>
-                <p className="give-zelle-note">Please confirm the recipient name before sending.</p>
+                <p className="give-zelle-note">
+                  {copied ? "Number copied." : "Please confirm the recipient name before sending."}
+                </p>
               </div>
             </div>
           </article>
