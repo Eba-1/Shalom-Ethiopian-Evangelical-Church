@@ -1473,4 +1473,473 @@ footer small {
     flex-direction: column;
     gap: 8px;
   }
+}\n\n/* About page */
+.about-page {
+  overflow: hidden;
+  background: #f5f0e7;
+}
+.about-nav .links .active {
+  color: var(--gold);
+  position: relative;
+}
+.about-nav .links .active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  height: 1px;
+  background: var(--gold);
+}
+.about-kicker {
+  margin: 0;
+  color: #ae7440;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .22em;
+}
+.about-hero {
+  position: relative;
+  min-height: 650px;
+  padding: 70px 7vw 76px;
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  align-items: center;
+  gap: 6vw;
+  background: #f7f2e9;
+}
+.about-hero-watermark {
+  position: absolute;
+  left: -25px;
+  top: 48%;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(181, 134, 71, .24);
+  font: 400 92px/1 Georgia, serif;
+  letter-spacing: .02em;
+  transform: translateY(-50%) rotate(-90deg);
+  pointer-events: none;
+}
+.about-hero-copy {
+  position: relative;
+  z-index: 2;
+  padding-left: 3vw;
+}
+.about-hero h1 {
+  margin: 22px 0 28px;
+  color: #202321;
+  font: 400 clamp(52px, 5vw, 78px)/1.03 Georgia, serif;
+  letter-spacing: -.045em;
+}
+.about-hero h1 em {
+  color: #202321;
+  font-weight: 400;
+}
+.about-rule {
+  width: 225px;
+  height: 12px;
+  position: relative;
+  margin: 0 0 28px;
+}
+.about-rule::before,
+.about-rule::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  height: 1px;
+  background: #b77443;
+}
+.about-rule::before { left: 0; width: 48%; }
+.about-rule::after { right: 0; width: 48%; }
+.about-rule span {
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid #c39343;
+  transform: translateX(-50%) rotate(45deg);
+}
+.about-hero-copy > p:last-child {
+  max-width: 370px;
+  margin: 0;
+  color: #4e534f;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.about-hero-art {
+  position: relative;
+  min-height: 490px;
+}
+.about-arch-frame {
+  position: absolute;
+  left: 8%;
+  top: 0;
+  width: 62%;
+  height: 88%;
+  overflow: hidden;
+  border: 2px solid #c59a51;
+  border-radius: 50% 50% 0 0 / 38% 38% 0 0;
+  background: #d7cec0;
+}
+.about-arch-frame img,
+.about-overlap-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-arch-frame img { object-position: center; }
+.about-overlap-frame {
+  position: absolute;
+  z-index: 3;
+  right: 1%;
+  bottom: 0;
+  width: 42%;
+  height: 48%;
+  padding: 7px;
+  border: 1px solid #b98a45;
+  background: #f7f2e9;
+}
+.about-overlap-frame img { object-position: center; }
+.about-art-box {
+  position: absolute;
+  right: 7%;
+  top: 22%;
+  width: 38%;
+  height: 52%;
+  border: 1px solid rgba(185, 138, 69, .66);
+}
+.about-art-dot {
+  position: absolute;
+  right: 2%;
+  top: 24%;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #a84f32;
+}
+.about-story {
+  padding: 90px 7vw;
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  align-items: center;
+  gap: 7vw;
+  background: #fbf8f1;
+}
+.about-story-image {
+  position: relative;
+  height: 440px;
+  margin: 0;
+}
+.about-story-image::before,
+.about-story-image span {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(184, 135, 65, .58);
+}
+.about-story-image::before {
+  inset: 22px -22px -22px 22px;
+}
+.about-story-image span {
+  left: -14px;
+  bottom: -14px;
+  width: 75px;
+  height: 75px;
+}
+.about-story-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-story-copy {
+  position: relative;
+}
+.about-story h2,
+.about-section-title h2,
+.pastors-heading h2,
+.about-community h2 {
+  margin: 15px 0 24px;
+  color: #202321;
+  font: 400 clamp(48px, 5vw, 76px)/.98 Georgia, serif;
+  letter-spacing: -.045em;
+}
+.about-story-copy > p:not(.about-kicker) {
+  max-width: 620px;
+  color: #535751;
+  font-size: 15px;
+  line-height: 1.78;
+}
+.about-since {
+  display: block;
+  margin-top: 28px;
+  color: rgba(184, 135, 65, .38);
+  font: 400 clamp(60px, 8vw, 118px)/.8 Georgia, serif;
+  letter-spacing: .04em;
+}
+.about-purpose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-purpose article {
+  min-height: 320px;
+  padding: 60px 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.about-mission {
+  color: #f7f1e7;
+  background: #1d2322;
+}
+.about-vision {
+  color: #fff7ec;
+  background: #a95134;
+}
+.purpose-icon {
+  color: #d6aa5c;
+  font: 35px Georgia, serif;
+}
+.about-purpose h2 {
+  margin: 10px 0 8px;
+  font: 400 42px Georgia, serif;
+}
+.about-purpose i {
+  width: 56px;
+  height: 1px;
+  margin: 0 0 18px;
+  background: #d6aa5c;
+}
+.about-purpose p {
+  max-width: 520px;
+  margin: 0;
+  color: inherit;
+  opacity: .88;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.about-beliefs {
+  padding: 92px 7vw;
+  display: grid;
+  grid-template-columns: .42fr 1fr;
+  gap: 8vw;
+  background: #f7f2e9;
+}
+.about-section-title span {
+  display: block;
+  width: 110px;
+  height: 1px;
+  background: #b98543;
+}
+.belief-list {
+  border-top: 1px solid #cfc6b8;
+}
+.belief-list details {
+  border-bottom: 1px solid #cfc6b8;
+}
+.belief-list summary {
+  min-height: 58px;
+  padding: 16px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #292c29;
+  cursor: pointer;
+  font-size: 14px;
+  list-style: none;
+}
+.belief-list summary::-webkit-details-marker { display: none; }
+.belief-list summary b {
+  position: relative;
+  width: 15px;
+  height: 15px;
+}
+.belief-list summary b::before,
+.belief-list summary b::after {
+  content: "";
+  position: absolute;
+  background: #9d603a;
+}
+.belief-list summary b::before { left: 0; top: 7px; width: 15px; height: 1px; }
+.belief-list summary b::after { left: 7px; top: 0; width: 1px; height: 15px; }
+.belief-list details[open] summary { color: #a85b35; }
+.belief-list details[open] summary b::after { display: none; }
+.belief-list details p {
+  max-width: 720px;
+  margin: 0;
+  padding: 0 45px 22px 4px;
+  color: #5b605a;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.about-pastors {
+  padding: 92px 6vw 105px;
+  background: #fbf8f1;
+}
+.pastors-heading {
+  max-width: 740px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+.pastors-heading > p:last-child {
+  color: #676b65;
+}
+.pastor-profiles {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2vw;
+  align-items: end;
+}
+.pastor-profile {
+  position: relative;
+}
+.pastor-profile:nth-child(2) { transform: translateY(-34px); }
+.pastor-profile-image,
+.pastor-profile-placeholder {
+  height: 430px;
+  border: 1px solid rgba(184, 135, 65, .62);
+  background: #dfd7ca;
+}
+.pastor-profile-image {
+  padding: 9px;
+}
+.pastor-profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.pastor-profile-placeholder {
+  display: grid;
+  place-items: center;
+  color: transparent;
+  background: linear-gradient(145deg, #e7dfd2, #cfc3b2);
+}
+.pastor-profile-placeholder span {
+  -webkit-text-stroke: 1px rgba(149, 104, 51, .45);
+  font: 400 140px/1 Georgia, serif;
+}
+.pastor-profile > p {
+  margin: 18px 0 5px;
+  color: #b0713f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.pastor-profile h3 {
+  margin: 0;
+  padding-top: 9px;
+  border-top: 1px solid #be9559;
+  color: #262925;
+  font: 400 clamp(23px, 2.1vw, 32px)/1.15 Georgia, serif;
+}
+.about-community {
+  position: relative;
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #fff9ef;
+  background: #171c1b;
+}
+.about-community > img,
+.about-community-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.about-community > img { object-fit: cover; }
+.about-community-overlay {
+  background: linear-gradient(90deg, rgba(18,22,21,.94), rgba(18,22,21,.62), rgba(18,22,21,.82));
+}
+.about-community-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 72px 6vw 62px;
+  text-align: center;
+}
+.about-community h2 {
+  color: #fff9ef;
+}
+.ministry-links {
+  max-width: 1260px;
+  margin: 42px auto 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border-top: 1px solid rgba(218, 175, 99, .45);
+  border-bottom: 1px solid rgba(218, 175, 99, .45);
+}
+.ministry-links a {
+  min-height: 112px;
+  padding: 22px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  border-right: 1px solid rgba(218, 175, 99, .32);
+  transition: background .25s ease, color .25s ease;
+}
+.ministry-links a:last-child { border-right: 0; }
+.ministry-links a:hover,
+.ministry-links a:focus-visible { background: rgba(201, 151, 70, .16); }
+.ministry-links span {
+  color: #d8ad61;
+  font: 18px Georgia, serif;
+}
+.ministry-links strong {
+  font: 400 15px/1.25 Georgia, serif;
+}
+@media (max-width: 900px) {
+  .about-hero {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    padding: 75px 7vw 65px;
+  }
+  .about-hero-copy { padding: 0; }
+  .about-hero-watermark { display: none; }
+  .about-hero-art { min-height: 520px; }
+  .about-story {
+    grid-template-columns: 1fr;
+  }
+  .about-story-image { height: 420px; }
+  .about-beliefs {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .pastor-profiles { gap: 18px; }
+  .pastor-profile-image,
+  .pastor-profile-placeholder { height: 350px; }
+  .ministry-links { grid-template-columns: repeat(3, 1fr); }
+  .ministry-links a:nth-child(3) { border-right: 0; }
+  .ministry-links a:nth-child(-n+3) { border-bottom: 1px solid rgba(218, 175, 99, .32); }
+}
+@media (max-width: 560px) {
+  .about-hero h1 { font-size: 49px; }
+  .about-hero-art { min-height: 390px; }
+  .about-arch-frame { left: 0; width: 75%; }
+  .about-overlap-frame { width: 48%; height: 46%; }
+  .about-art-dot { width: 48px; height: 48px; }
+  .about-story { padding: 70px 7vw; }
+  .about-story-image { height: 300px; }
+  .about-since { font-size: 17vw; }
+  .about-purpose { grid-template-columns: 1fr; }
+  .about-purpose article { min-height: 280px; padding: 50px 8vw; }
+  .about-beliefs { padding: 70px 7vw; }
+  .pastor-profiles { grid-template-columns: 1fr; gap: 45px; }
+  .pastor-profile:nth-child(2) { transform: none; }
+  .pastor-profile-image,
+  .pastor-profile-placeholder { height: 440px; }
+  .about-community-content { padding: 65px 6vw 55px; }
+  .about-community h2 { font-size: 49px; }
+  .ministry-links { grid-template-columns: repeat(2, 1fr); }
+  .ministry-links a:nth-child(3) { border-right: 1px solid rgba(218, 175, 99, .32); }
+  .ministry-links a:nth-child(even) { border-right: 0; }
+  .ministry-links a:nth-child(-n+4) { border-bottom: 1px solid rgba(218, 175, 99, .32); }
 }
