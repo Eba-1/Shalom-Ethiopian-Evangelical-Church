@@ -23,11 +23,10 @@ export default function SiteFooter() {
         <nav className="site-footer-column" aria-label="Footer navigation">
           <h2>Quick Links</h2>
           <a href="#top">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
+          <a href="/about">About</a>
+          <a href="#visit">Services</a>
           <a href="/gallery">Gallery</a>
-          <a href="#contact">Contact</a>
-          <GiveDialog className="site-footer-give">Give</GiveDialog>
+          <a href="/contact">Contact</a>
         </nav>
 
         <div className="site-footer-column site-footer-contact">
@@ -35,19 +34,15 @@ export default function SiteFooter() {
           <a href="/contact">
             5501 SE Thiessen Rd<br />Portland, OR 97267
           </a>
-          <a href={youtubeUrl} target="_blank" rel="noreferrer">YouTube</a>
-        </div>
-
-        <div className="site-footer-invitation">
-          <p>There is a<br />place for <em>you</em> here.</p>
-          <GiveDialog className="site-footer-give">GIVE <span aria-hidden="true">→</span></GiveDialog>
+          <a href="https://www.youtube.com/@Shalom-w2h/" target="_blank" rel="noreferrer">YouTube</a>
+          <a href="https://www.facebook.com/people/Shalom-Church/61576299283930/#" target="_blank" rel="noreferrer">Facebook</a>
         </div>
       </div>
 
       <div className="site-footer-bottom">
         <span>© 2026 Shalom Ethiopian Evangelical Church</span>
         <a className="site-footer-top" href="#top" aria-label="Back to top">↑</a>
-        <span>Portland, Oregon</span>
+        <span>Milwaukie, Oregon</span>
       </div>
     </footer>
   );

@@ -13,7 +13,7 @@ export default function Home(){return <main>
         <span>SHALOM ETHIOPIAN<br></br> EVANGELICAL <br/><b>CHURCH</b></span>
     </a>
     <div className="links">
-        <a href="#top">Home</a>
+        <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/ministries">Ministries</a>
         <a href="/gallery">Gallery</a>
@@ -46,7 +46,7 @@ export default function Home(){return <main>
     <div className="closing-actions">
         <a className="closing-primary" href="https://www.google.com/maps/search/?api=1&query=5501%20SE%20Thiessen%20Rd%2C%20Portland%2C%20OR%2097267" target="_blank" rel="noreferrer">GET DIRECTIONS <span>↗</span></a>
         <a href="https://www.youtube.com/@Shalom-w2h/streams" target="_blank" rel="noreferrer">WATCH LIVE <span>→</span></a>
-        <a href="#contact">CONTACT US <span>→</span></a>
+        <a href="/contact">CONTACT US <span>→</span></a>
     </div>
 </section>
 <SiteFooter />
