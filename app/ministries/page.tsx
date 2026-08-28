@@ -12,7 +12,8 @@ const ministries = [
     id: "evangelism",
     title: "Evangelism & Holistic Ministry",
     shortTitle: "Evangelism &\nHolistic Ministry",
-    photo: "OUTREACH PHOTO",
+    image: "/ministries/holistic-ministry.webp",
+    imageAlt: "Church members preparing food together as an act of service",
     intro:
       "Sharing the hope of Christ in word and action while caring for the whole person—body, mind, and spirit.",
     paragraphs: [
@@ -26,7 +27,8 @@ const ministries = [
     id: "children",
     title: "Children’s Ministry",
     shortTitle: "Children’s\nMinistry",
-    photo: "CHILDREN’S PHOTO",
+    image: "/ministries/childrens-ministry.webp",
+    imageAlt: "Children spending time together at Shalom",
     intro:
       "Nurturing the next generation to know God’s love and grow in faith, joy, character, and purpose.",
     paragraphs: [
@@ -38,7 +40,8 @@ const ministries = [
     id: "women",
     title: "Women’s Fellowship",
     shortTitle: "Women’s\nFellowship",
-    photo: "WOMEN’S FELLOWSHIP PHOTO",
+    image: "/ministries/womens-fellowship.webp",
+    imageAlt: "Women worshiping together at Shalom",
     intro:
       "Encouraging women to grow in faith, build meaningful relationships, and live out God’s purpose together.",
     paragraphs: [
@@ -52,7 +55,8 @@ const ministries = [
     id: "brothers",
     title: "Brothers’ Fellowship",
     shortTitle: "Brothers’\nFellowship",
-    photo: "BROTHERS’ FELLOWSHIP PHOTO",
+    image: "/ministries/brothers-fellowship.webp",
+    imageAlt: "A man worshiping during a Shalom gathering",
     intro:
       "Building godly men who lead with integrity, serve with humility, and encourage one another in Christ.",
     paragraphs: [
@@ -66,7 +70,8 @@ const ministries = [
     id: "worship",
     title: "Choir & Worship Team",
     shortTitle: "Choir &\nWorship Team",
-    photo: "CHOIR & WORSHIP PHOTO",
+    image: "/ministries/choir-worship.webp",
+    imageAlt: "The Shalom choir leading worship",
     intro:
       "Lifting our voices and hearts as we lead the church into heartfelt, biblical, and Spirit-filled worship.",
     paragraphs: [
@@ -80,7 +85,8 @@ const ministries = [
     id: "young-adults",
     title: "Young Adults Ministry",
     shortTitle: "Young Adults\nMinistry",
-    photo: "YOUNG ADULTS PHOTO",
+    image: "/ministries/young-adults.webp",
+    imageAlt: "A young adult worshiping with the church community",
     intro:
       "Connecting young adults to Christ, community, friendship, and purpose through every season of adulthood.",
     paragraphs: [
@@ -119,10 +125,9 @@ export default function MinistriesPage() {
           <p>We’re a family of faith called to love God, love people, and make disciples—together.</p>
           <a href="#ministry-navigation" aria-label="Explore our ministries">EXPLORE <span>↓</span></a>
         </div>
-        <div className="ministry-placeholder ministry-hero-placeholder" role="img" aria-label="Placeholder for a ministry community photograph">
-          <span className="placeholder-icon" aria-hidden="true">◇</span>
-          <b>MINISTRY COMMUNITY PHOTO</b>
-        </div>
+        <figure className="ministry-photo ministry-hero-photo">
+          <img src="/ministries/ministry-community.webp" alt="Shalom members sharing the hope of Jesus in the community" />
+        </figure>
       </section>
 
       <nav className="ministries-index" id="ministry-navigation" aria-label="Ministry sections">
@@ -150,10 +155,9 @@ export default function MinistriesPage() {
                 </div>
               </details>
             </div>
-            <div className="ministry-placeholder ministry-feature-placeholder" role="img" aria-label={`Placeholder for ${ministry.title} photograph`}>
-              <span className="placeholder-icon" aria-hidden="true">◇</span>
-              <b>{ministry.photo}</b>
-            </div>
+            <figure className="ministry-photo ministry-feature-photo">
+              <img src={ministry.image} alt={ministry.imageAlt} />
+            </figure>
           </section>
         ))}
       </div>

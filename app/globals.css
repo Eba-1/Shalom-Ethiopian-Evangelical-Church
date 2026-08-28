@@ -1566,7 +1566,8 @@ footer small {
   letter-spacing: .19em;
 }
 .ministries-hero-copy > a span { color: #a45a38; font-size: 16px; }
-.ministry-placeholder {
+.ministry-placeholder,
+.ministry-photo {
   position: relative;
   display: grid;
   place-content: center;
@@ -1579,6 +1580,19 @@ footer small {
     linear-gradient(135deg, rgba(255,255,255,.28), transparent 42%),
     #d8d0c5;
 }
+.ministry-photo {
+  margin: 0;
+  display: block;
+  background: #d8d0c5;
+}
+.ministry-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.2,.75,.25,1), filter .45s ease;
+}
+.ministry-photo:hover img { transform: scale(1.025); filter: saturate(1.05); }
 .ministry-placeholder::before,
 .ministry-placeholder::after {
   content: "";
@@ -1598,10 +1612,13 @@ footer small {
   color: #a87d3d;
   font: 34px/1 Georgia, serif;
 }
-.ministry-hero-placeholder {
+.ministry-hero-placeholder,
+.ministry-hero-photo {
+  height: 390px;
   min-height: 390px;
   box-shadow: 16px 16px 0 #a85136;
 }
+.ministry-hero-photo img { object-position: center 45%; }
 .ministries-index {
   padding: 22px 4vw;
   display: grid;
@@ -1651,7 +1668,8 @@ footer small {
 }
 .ministry-feature:nth-child(even) { grid-template-columns: 1.18fr .82fr; }
 .ministry-feature:nth-child(even) .ministry-copy { order: 2; }
-.ministry-feature:nth-child(even) .ministry-feature-placeholder { order: 1; }
+.ministry-feature:nth-child(even) .ministry-feature-placeholder,
+.ministry-feature:nth-child(even) .ministry-feature-photo { order: 1; }
 .ministry-feature:nth-child(3n) { background: #f2ece2; }
 .ministry-copy { max-width: 510px; }
 .ministry-number {
@@ -1721,8 +1739,10 @@ footer small {
   font-weight: 700;
   letter-spacing: .16em;
 }
-.ministry-feature-placeholder { min-height: 350px; }
-.ministry-feature:nth-child(2n) .ministry-feature-placeholder { min-height: 315px; }
+.ministry-feature-placeholder,
+.ministry-feature-photo { height: 350px; min-height: 350px; }
+.ministry-feature:nth-child(2n) .ministry-feature-placeholder,
+.ministry-feature:nth-child(2n) .ministry-feature-photo { height: 315px; min-height: 315px; }
 .ministries-cta {
   position: relative;
   min-height: 410px;
@@ -1785,7 +1805,8 @@ footer small {
 @media (max-width: 900px) {
   .ministries-hero { min-height: 0; padding-top: 92px; grid-template-columns: 1fr; }
   .ministries-watermark { font-size: 18vw; }
-  .ministry-hero-placeholder { min-height: 360px; }
+  .ministry-hero-placeholder,
+  .ministry-hero-photo { height: 360px; min-height: 360px; }
   .ministries-index { grid-template-columns: repeat(3, 1fr); }
   .ministries-index a:nth-child(3) { border-right: 0; }
   .ministries-index a:nth-child(-n+3) { border-bottom: 1px solid rgba(211, 172, 99, .34); }
@@ -1793,14 +1814,17 @@ footer small {
   .ministry-feature:nth-child(even) { grid-template-columns: 1fr 1.18fr; gap: 5vw; padding-inline: 6vw; }
   .ministry-feature:nth-child(even) { grid-template-columns: 1.18fr 1fr; }
   .ministry-feature-placeholder,
-  .ministry-feature:nth-child(2n) .ministry-feature-placeholder { min-height: 300px; }
+  .ministry-feature-photo,
+  .ministry-feature:nth-child(2n) .ministry-feature-placeholder,
+  .ministry-feature:nth-child(2n) .ministry-feature-photo { height: 300px; min-height: 300px; }
 }
 
 @media (max-width: 620px) {
   .ministries-hero { padding: 72px 6vw 55px; gap: 46px; }
   .ministries-watermark { top: 20px; font-size: 20vw; }
   .ministries-hero-copy h1 { font-size: 54px; }
-  .ministry-hero-placeholder { min-height: 270px; box-shadow: 9px 9px 0 #a85136; }
+  .ministry-hero-placeholder,
+  .ministry-hero-photo { height: 270px; min-height: 270px; box-shadow: 9px 9px 0 #a85136; }
   .ministries-index { grid-template-columns: repeat(2, 1fr); padding: 14px 4vw; }
   .ministries-index a { min-height: 96px; }
   .ministries-index a:nth-child(3) { border-right: 1px solid rgba(211, 172, 99, .34); }
@@ -1814,12 +1838,16 @@ footer small {
     gap: 30px;
   }
   .ministry-feature:nth-child(even) .ministry-copy,
-  .ministry-feature:nth-child(even) .ministry-feature-placeholder { order: initial; }
+  .ministry-feature:nth-child(even) .ministry-feature-placeholder,
+  .ministry-feature:nth-child(even) .ministry-feature-photo { order: initial; }
   .ministry-feature .ministry-copy { order: 1; }
-  .ministry-feature .ministry-feature-placeholder { order: 2; }
+  .ministry-feature .ministry-feature-placeholder,
+  .ministry-feature .ministry-feature-photo { order: 2; }
   .ministry-copy h2 { font-size: 43px; }
   .ministry-feature-placeholder,
-  .ministry-feature:nth-child(2n) .ministry-feature-placeholder { min-height: 270px; }
+  .ministry-feature-photo,
+  .ministry-feature:nth-child(2n) .ministry-feature-placeholder,
+  .ministry-feature:nth-child(2n) .ministry-feature-photo { height: 270px; min-height: 270px; }
   .ministry-details { max-height: none; overflow: visible; }
   .ministries-cta { min-height: 0; padding: 70px 7vw 62px; }
   .ministries-cta-flourish { display: none; }
@@ -1854,9 +1882,8 @@ footer small {
   .ministries-hero-copy h1 {
     font-size: clamp(54px, 5vw, 74px);
   }
-  .ministry-hero-placeholder {
-    min-height: 338px;
-  }
+  .ministry-hero-placeholder,
+  .ministry-hero-photo { height: 338px; min-height: 338px; }
   .ministries-index {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -1920,9 +1947,9 @@ footer small {
     padding: 4px 0;
   }
   .ministry-feature-placeholder,
-  .ministry-feature:nth-child(2n) .ministry-feature-placeholder {
-    min-height: 264px;
-  }
+  .ministry-feature-photo,
+  .ministry-feature:nth-child(2n) .ministry-feature-placeholder,
+  .ministry-feature:nth-child(2n) .ministry-feature-photo { height: 264px; min-height: 264px; }
   .ministry-details {
     max-height: 225px;
   }
