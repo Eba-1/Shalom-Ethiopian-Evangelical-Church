@@ -1834,6 +1834,124 @@ footer small {
   .ministries-page *::after { scroll-behavior: auto !important; transition: none !important; }
 }
 
+/* Approved ministries composition refinements */
+@media (min-width: 901px) {
+  .ministries-hero {
+    min-height: 520px;
+    padding-top: 82px;
+    padding-bottom: 42px;
+    grid-template-columns: .76fr 1.24fr;
+    gap: 4.5vw;
+  }
+  .ministries-watermark {
+    top: -18px;
+    left: 1.3vw;
+    font-size: clamp(104px, 12.2vw, 176px);
+  }
+  .ministries-hero-copy {
+    padding-left: 1.2vw;
+  }
+  .ministries-hero-copy h1 {
+    font-size: clamp(54px, 5vw, 74px);
+  }
+  .ministry-hero-placeholder {
+    min-height: 338px;
+  }
+  .ministries-index {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .ministries-index a {
+    min-height: 92px;
+  }
+  .ministry-feature,
+  .ministry-feature:nth-child(even) {
+    min-height: 318px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .ministry-feature {
+    grid-template-columns: .7fr 1.3fr;
+  }
+  .ministry-feature:nth-child(even) {
+    grid-template-columns: 1.22fr .78fr;
+  }
+  .ministry-copy {
+    position: relative;
+  }
+  .ministry-feature:nth-child(odd) .ministry-copy {
+    padding-left: 34px;
+  }
+  .ministry-feature:nth-child(odd) .ministry-copy::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 4px;
+    width: 1px;
+    background: rgba(189, 142, 69, .62);
+  }
+  .ministry-feature:nth-child(odd) .ministry-copy::after {
+    content: "";
+    position: absolute;
+    left: -3px;
+    bottom: 1px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #bd8e45;
+  }
+  .ministry-feature:nth-child(odd) .ministry-number i {
+    display: none;
+  }
+  .ministry-copy h2 {
+    margin-top: 7px;
+    margin-bottom: 11px;
+    font-size: clamp(34px, 3.25vw, 49px);
+  }
+  .ministry-copy > p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .ministry-copy details {
+    margin-top: 9px;
+  }
+  .ministry-copy summary {
+    padding: 4px 0;
+  }
+  .ministry-feature-placeholder,
+  .ministry-feature:nth-child(2n) .ministry-feature-placeholder {
+    min-height: 264px;
+  }
+  .ministry-details {
+    max-height: 225px;
+  }
+  .ministries-cta {
+    min-height: 330px;
+    padding-top: 60px;
+    padding-bottom: 52px;
+  }
+  .ministries-cta h2 {
+    margin: 13px 0;
+    font-size: clamp(48px, 5vw, 68px);
+  }
+  .ministries-cta > div {
+    margin-top: 27px;
+  }
+}
+
+@media (min-width: 621px) and (max-width: 900px) {
+  .ministries-hero { padding-top: 78px; }
+  .ministry-feature,
+  .ministry-feature:nth-child(even) {
+    min-height: 355px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .ministry-copy h2 { font-size: 40px; }
+  .ministries-cta { min-height: 350px; }
+}
+
 /* Giving dialog */
 .give-dialog {
   width: min(1120px, calc(100vw - 48px));
