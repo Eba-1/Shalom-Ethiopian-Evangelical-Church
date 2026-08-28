@@ -1,5 +1,6 @@
 import GiveDialog from "../../components/give-dialog";
 import SiteFooter from "../../components/site-footer";
+import LiveStreamBanner from "../../components/live-stream-banner";
 
 export const metadata = {
   title: "Ministries | Shalom Ethiopian Evangelical Church",
@@ -100,7 +101,7 @@ const ministries = [
 export default function MinistriesPage() {
   return (
     <main className="ministries-page" id="top">
-      <div className="notice">Live worship at 10:00 AM</div>
+      <LiveStreamBanner />
       <nav className="nav ministries-nav" aria-label="Main navigation">
         <a className="brand" href="/">
           <img className="brand-logo" src="/shalom-church-logo.png" alt="Shalom Ethiopian Evangelical Church logo" />
