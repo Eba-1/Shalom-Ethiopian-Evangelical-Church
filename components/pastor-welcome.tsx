@@ -1,0 +1,76 @@
+"use client";
+
+import { useState } from "react";
+
+export default function PastorWelcome() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <section className="pastor-welcome" id="about" aria-labelledby="pastor-welcome-title">
+      <div className="pastor-portrait-wrap">
+        <img
+          className="pastor-portrait"
+          src="/pastor-melkamu-tadesse.jpg"
+          alt="Pastor Melkamu Tadesse preaching at Shalom Ethiopian Evangelical Church"
+        />
+        <div className="pastor-nameplate">
+          <span>SENIOR PASTOR</span>
+          <strong>Melkamu Tadesse</strong>
+        </div>
+      </div>
+
+      <div className="pastor-copy">
+        <span className="pastor-watermark" aria-hidden="true">WELCOME</span>
+        <p className="eyebrow gold">A MESSAGE FROM OUR SENIOR PASTOR</p>
+        <h2 id="pastor-welcome-title">Welcome to our<br /><em>church family.</em></h2>
+        <p className="pastor-lead">
+          It is a joy to have you with us, whether you are visiting for the first time
+          or have been part of our church family for years.
+        </p>
+        <blockquote>
+          “Together, we are called to serve, grow, and impact our communities for Christ.”
+        </blockquote>
+
+        <button
+          className="pastor-toggle"
+          type="button"
+          aria-expanded={isOpen}
+          aria-controls="pastor-full-message"
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          <span>{isOpen ? "CLOSE MESSAGE" : "READ THE FULL WELCOME"}</span>
+          <b aria-hidden="true">{isOpen ? "−" : "+"}</b>
+        </button>
+
+        <div className={`pastor-message ${isOpen ? "open" : ""}`} id="pastor-full-message">
+          <div>
+            <div className="pastor-message-inner">
+              <p>
+                Welcome to our Shalom Ethiopian Evangelical Church Portland community! It is a joy
+                to have you with us, whether you are visiting for the first time or have been part
+                of our church family for years. As Senior Pastor, my heart is to lead and serve
+                alongside all of you, to guide our church in growing deeper in faith, stronger in
+                relationships, and more passionate about sharing the love of Jesus Christ with our world.
+              </p>
+              <p>
+                In our church, we are committed to creating a welcoming, inclusive environment where
+                people of all ages can encounter God&apos;s love, experience His grace, and be transformed
+                by His truth. Our mission is to make disciples who will impact the world with the hope
+                of the gospel.
+              </p>
+              <p>
+                I believe God has an incredible plan for each of us, and together, we are called to
+                serve, grow, and impact our communities for Christ. We are excited for what God is
+                doing in our midst, and we invite you to be a part of it. You can follow us on social
+                media, Facebook, YouTube, and TikTok. Thank you for visiting our site, and I hope to
+                connect with you in person soon.
+              </p>
+              <p>May God bless you abundantly as you walk in His love and grace.</p>
+              <p className="pastor-signoff">In Christ&apos;s service,<br /><strong>Pastor Melkamu Tadesse</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
